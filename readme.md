@@ -7,6 +7,8 @@
 
 * Vui lòng liên hệ skype: `pckhien` nếu như có bất cứ câu hỏi nào. Xin cảm ơn.  
 
+* Check diff code: https://github.com/mbvb1223/laravel-example/pull/1
+
 ### Design ###
 
 ![Screenshot](public/img/Design-ATB.png)
@@ -30,10 +32,12 @@
 ### Run Test cases ###
 
 * `./vendor/bin/phpunit`
+![Screenshot](public/img/atb-test.png)
 
 ### Example endpoints ###
 
 * `Search by Name:` http://localhost:8001/api/contacts/search?type=1&searchTerm=a
 ![Screenshot](public/img/ATB-Name.png)
+
 * `Search by Phone:` http://localhost:8001/api/contacts/search?type=2&searchTerm=0979903200
 ![Screenshot](public/img/ATB-Phone.png)
