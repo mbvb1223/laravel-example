@@ -9,6 +9,8 @@
 
 * Check diff code: https://github.com/mbvb1223/laravel-example/pull/1
 
+* Circle CI: https://circleci.com/gh/mbvb1223/laravel-example
+
 ### Design ###
 
 ![Screenshot](public/img/Design-ATB.png)

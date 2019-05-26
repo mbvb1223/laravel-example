@@ -1,4 +1,5 @@
-version: 2
+version: 2 # use CircleCI 2.0
+
 jobs:
   build:
     docker:
@@ -46,6 +47,6 @@ jobs:
 
 workflows:
   version: 2
-  notify_deploy:
+  build_test:
     jobs:
       - build
