@@ -3,16 +3,10 @@
 namespace App\Services;
 
 use App\Interfaces\SearchableInterface;
-use App\Repositories\ContactRepositoryInterface;
 use App\Services\Contact\SearchContactFactory;
 
 class ContactService
 {
-    /**
-     * @var ContactRepositoryInterface
-     */
-    private $contactRepository;
-
     /**
      * @var SearchContactFactory
      */
@@ -21,14 +15,11 @@ class ContactService
     /**
      * ContactService constructor.
      *
-     * @param ContactRepositoryInterface $contactRepository
      * @param SearchContactFactory $searchContactFactory
      */
     public function __construct(
-        ContactRepositoryInterface $contactRepository,
         SearchContactFactory $searchContactFactory
     ) {
-        $this->contactRepository = $contactRepository;
         $this->searchContactFactory = $searchContactFactory;
     }
 

@@ -55,12 +55,10 @@ class AppServiceProvider extends ServiceProvider
         });
 
         $this->app->singleton(ContactService::class, function () {
-            /** @var ContactRepositoryInterface $contactRepository */
-            $contactRepository = $this->app->get(ContactRepositoryInterface::class);
             /** @var SearchContactFactory $searchContactFactory */
             $searchContactFactory = $this->app->get(SearchContactFactory::class);
 
-            return new ContactService($contactRepository, $searchContactFactory);
+            return new ContactService($searchContactFactory);
         });
     }
 }
