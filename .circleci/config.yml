@@ -21,6 +21,7 @@ jobs:
             sudo docker-php-ext-install zip
             sudo docker-php-ext-install pdo_mysql
             sudo apt install -y mysql-client
+      - run: cp .env.testing .env
       - run: sudo composer self-update
 
       # Download and cache dependencies
@@ -45,6 +46,6 @@ jobs:
 
 workflows:
   version: 2.1
-  notify_deploy:
+  build_test:
     jobs:
       - build
