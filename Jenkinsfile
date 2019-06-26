@@ -17,6 +17,7 @@ node('master') {
 
         stage('test') {
             // Run any testing suites
+            sh " php artisan migrate:refresh --seed"
             sh "./vendor/bin/phpunit"
         }
 
