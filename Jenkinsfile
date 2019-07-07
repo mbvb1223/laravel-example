@@ -2,28 +2,16 @@
 
 node('master') {
     try {
-        stage('Prepare') {
-            steps {
-                sh 'composer install'
-                sh 'rm -rf build/api'
-                sh 'rm -rf build/coverage'
-                sh 'rm -rf build/logs'
-                sh 'rm -rf build/pdepend'
-                sh 'rm -rf build/phpdox'
-                sh 'mkdir build/api'
-                sh 'mkdir build/coverage'
-                sh 'mkdir build/logs'
-                sh 'mkdir build/pdepend'
-                sh 'mkdir build/phpdox'
-            }
-        }
         stage('build') {
             // Checkout the app at the given commit sha from the webhook
             checkout scm
 
             // Install dependencies, create a new .env file and generate a new key, just for testing
             sh "cp .env.example .env"
-            docker.build('app')
+            def customImage = docker.build('app')
+            customImage.inside {
+                sh 'make test'
+            }
 
             sh "php artisan key:generate"
 
