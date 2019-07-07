@@ -1,52 +1,50 @@
 #!/usr/bin/env groovy
 
-pipeline {
-    agent any
-    options {
-        parallelsAlwaysFailFast()
-    }
-    stages {
-        stage('Non-Parallel Stage') {
-            steps {
-                echo 'This stage will be executed first.'
+node('master') {
+    try {
+        stage('Checkout source code') {
+            // Checkout the app at the given commit sha from the webhook
+            checkout scm
+        }
+
+        stage('Build') {
+            def customImage = docker.build('app')
+
+            // Install dependencies, create a new .env file and generate a new key, just for testing
+            sh "cp .env.example .env"
+
+
+            docker.build('webserver')
+            docker.build('db')
+
+            customImage.inside {
+                sh 'composer install'
+                sh 'php artisan key:generate'
             }
         }
-        stage('Parallel Stage') {
-            parallel {
-                stage('Branch A') {
-                    agent {
-                        label "for-branch-a"
-                    }
-                    steps {
-                        echo "On Branch A"
-                    }
-                }
-                stage('Branch B') {
-                    agent {
-                        label "for-branch-b"
-                    }
-                    steps {
-                        echo "On Branch B"
-                    }
-                }
-                stage('Branch C') {
-                    agent {
-                        label "for-branch-c"
-                    }
-                    stages {
-                        stage('Nested 1') {
-                            steps {
-                                echo "In stage Nested 1 within Branch C"
-                            }
-                        }
-                        stage('Nested 2') {
-                            steps {
-                                echo "In stage Nested 2 within Branch C"
-                            }
-                        }
-                    }
-                }
+
+        stage('Test') {
+            def customImage = docker.build('app')
+
+            customImage.inside {
+                sh 'php ./vendor/bin/phpunit'
             }
         }
+
+        stage('Deploy') {
+            // If we had ansible installed on the server, setup to run an ansible playbook
+            // sh "ansible-playbook -i ./ansible/hosts ./ansible/deploy.yml"
+            sh "echo 'WE ARE DEPLOYING.......'"
+        }
+
+        stage('Clean Work Space') {
+            cleanWs()
+            sh 'pwd'
+            sh 'ls'
+        }
+    } catch(error) {
+        throw error
+    } finally {
+        // Any cleanup operations needed, whether we hit an error or not
     }
 }
