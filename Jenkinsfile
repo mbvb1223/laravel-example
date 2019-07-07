@@ -32,6 +32,12 @@ node('master') {
             // sh "ansible-playbook -i ./ansible/hosts ./ansible/deploy.yml"
             sh "echo 'WE ARE DEPLOYING.......'"
         }
+
+        stage('Clean Work Space') {
+            cleanWs()
+            sh 'pwd'
+            sh 'ls'
+        }
     } catch(error) {
         throw error
     } finally {
