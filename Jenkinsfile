@@ -3,7 +3,7 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
                 checkout scm
                 sh "cp .env.example .env"
@@ -16,7 +16,7 @@ pipeline {
                 }
             }
         }
-        stage('build') {
+        stage('Test') {
             steps {
                 def customImage = docker.build('app')
                 customImage.inside {
