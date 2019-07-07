@@ -45,6 +45,6 @@ node('master') {
     } catch(error) {
         throw error
     } finally {
-        // Any cleanup operations needed, whether we hit an error or not
+        cleanWs cleanWhenFailure: true
     }
 }
