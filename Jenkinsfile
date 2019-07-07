@@ -8,6 +8,7 @@ node('master') {
 
             // Install dependencies, create a new .env file and generate a new key, just for testing
             sh "cp .env.example .env"
+            sh "/usr/local/bin/docker-compose --version"
             sh "/usr/local/bin/docker-compose up"
             sh "php artisan key:generate"
 
