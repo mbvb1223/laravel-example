@@ -10,7 +10,7 @@ node('master') {
             sh "cp .env.example .env"
             def customImage = docker.build('app')
             customImage.inside {
-                sh 'make test'
+                sh 'php artisan key:generate'
             }
 
             sh "php artisan key:generate"
