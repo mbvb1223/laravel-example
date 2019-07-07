@@ -10,13 +10,9 @@ node('master') {
             sh "cp .env.example .env"
             def customImage = docker.build('app')
             customImage.inside {
+                sh 'composer install'
                 sh 'php artisan key:generate'
             }
-
-            sh "php artisan key:generate"
-
-            // Run any static asset building, if needed
-            // sh "npm install && gulp --production"
         }
 
         stage('test') {
