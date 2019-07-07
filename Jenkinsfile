@@ -21,7 +21,7 @@ node('master') {
 
         stage('test') {
             customImage.inside {
-                sh './vendor/bin/phpunit'
+                sh 'php ./vendor/bin/phpunit'
             }
         }
 
