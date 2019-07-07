@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c0ae8485-9bba-4579-ab96-ea8756d3cbe2" name="Default Changelist" comment="">
+    <list default="true" id="c0ae8485-9bba-4579-ab96-ea8756d3cbe2" name="Default Changelist" comment="pipeline">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
     </list>
@@ -31,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            <state relative-caret-position="242">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -341,7 +341,7 @@
       <workItem from="1562292916107" duration="1257000" />
       <workItem from="1562299499219" duration="6722000" />
       <workItem from="1562457472306" duration="8305000" />
-      <workItem from="1562472329010" duration="201000" />
+      <workItem from="1562472329010" duration="433000" />
     </task>
     <task id="LOCAL-00001" summary="add jenkins file">
       <created>1561563068090</created>
@@ -588,11 +588,32 @@
       <option name="project" value="LOCAL" />
       <updated>1562472087091</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="pipeline">
+      <created>1562472539405</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1562472539405</updated>
+    </task>
+    <task id="LOCAL-00037" summary="pipeline">
+      <created>1562472607599</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1562472607599</updated>
+    </task>
+    <task id="LOCAL-00038" summary="pipeline">
+      <created>1562472688053</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1562472688053</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19344000" />
+    <option name="totallyTimeSpent" value="19576000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -646,7 +667,8 @@
     <MESSAGE value="oke" />
     <MESSAGE value="oke 2" />
     <MESSAGE value="parallel" />
-    <option name="LAST_COMMIT_MESSAGE" value="parallel" />
+    <MESSAGE value="pipeline" />
+    <option name="LAST_COMMIT_MESSAGE" value="pipeline" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -759,8 +781,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        <state relative-caret-position="242">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
         </state>
       </provider>
     </entry>
