@@ -12,6 +12,8 @@ node('master') {
             customImage.inside {
                 sh 'composer install'
                 sh 'php artisan key:generate'
+                sh 'php artisan migrate:refresh --seed'
+                sh './vendor/bin/phpunit'
             }
         }
 
