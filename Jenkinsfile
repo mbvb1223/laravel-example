@@ -9,11 +9,6 @@ node('master') {
             // Install dependencies, create a new .env file and generate a new key, just for testing
             sh "cp .env.example .env"
             docker.build('app')
-            def customImage = docker.build("app")
-
-            customImage.inside {
-                sh 'php artisan key:generate'
-            }
 
             sh "php artisan key:generate"
 
