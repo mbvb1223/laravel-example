@@ -22,6 +22,8 @@ node('master') {
         }
 
         stage('Test') {
+            def customImage = docker.build('app')
+
             customImage.inside {
                 sh 'php ./vendor/bin/phpunit'
             }
