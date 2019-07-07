@@ -3,6 +3,11 @@
 pipeline {
     agent none
     stages {
+        stage('Clean workspace') {
+            deleteDir()
+            sh 'ls -lah'
+        }
+
         stage('Build') {
             // Checkout the app at the given commit sha from the webhook
             checkout scm
