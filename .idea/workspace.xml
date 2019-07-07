@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c0ae8485-9bba-4579-ab96-ea8756d3cbe2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+            <state relative-caret-position="418">
+              <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -340,7 +339,7 @@
       <workItem from="1562292225133" duration="595000" />
       <workItem from="1562292916107" duration="1257000" />
       <workItem from="1562299499219" duration="6722000" />
-      <workItem from="1562457472306" duration="5293000" />
+      <workItem from="1562457472306" duration="6713000" />
     </task>
     <task id="LOCAL-00001" summary="add jenkins file">
       <created>1561563068090</created>
@@ -517,11 +516,39 @@
       <option name="project" value="LOCAL" />
       <updated>1562464548298</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="add docker file 5">
+      <created>1562464629089</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1562464629089</updated>
+    </task>
+    <task id="LOCAL-00027" summary="oke">
+      <created>1562464735254</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1562464735254</updated>
+    </task>
+    <task id="LOCAL-00028" summary="oke 2">
+      <created>1562464814884</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1562464814884</updated>
+    </task>
+    <task id="LOCAL-00029" summary="oke 2">
+      <created>1562465606639</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1562465606639</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16131000" />
+    <option name="totallyTimeSpent" value="17551000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -571,7 +598,9 @@
     <MESSAGE value="add docker file 3" />
     <MESSAGE value="add docker file 4" />
     <MESSAGE value="add docker file 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="add docker file 5" />
+    <MESSAGE value="oke" />
+    <MESSAGE value="oke 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="oke 2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -684,8 +713,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        <state relative-caret-position="418">
+          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
         </state>
       </provider>
     </entry>
