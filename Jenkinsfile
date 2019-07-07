@@ -7,8 +7,8 @@ node('master') {
             checkout scm
 
             // Install dependencies, create a new .env file and generate a new key, just for testing
-            sh "composer install"
             sh "cp .env.example .env"
+            sh "docker-compose up"
             sh "php artisan key:generate"
 
             // Run any static asset building, if needed
