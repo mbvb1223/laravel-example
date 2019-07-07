@@ -12,9 +12,6 @@ pipeline {
             }
         }
         stage('Parallel Stage') {
-            when {
-                branch 'master'
-            }
             parallel {
                 stage('Branch A') {
                     agent {
