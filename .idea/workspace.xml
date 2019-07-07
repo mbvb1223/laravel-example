@@ -30,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+            <state relative-caret-position="88">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -321,7 +321,7 @@
       <workItem from="1562292225133" duration="595000" />
       <workItem from="1562292916107" duration="1257000" />
       <workItem from="1562299499219" duration="6722000" />
-      <workItem from="1562457472306" duration="1999000" />
+      <workItem from="1562457472306" duration="2462000" />
     </task>
     <task id="LOCAL-00001" summary="add jenkins file">
       <created>1561563068090</created>
@@ -379,11 +379,32 @@
       <option name="project" value="LOCAL" />
       <updated>1562459106748</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add docker file 4">
+      <created>1562459501250</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1562459501250</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add docker file 4">
+      <created>1562459611415</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1562459611415</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add docker file 5">
+      <created>1562459674010</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1562459674010</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12837000" />
+    <option name="totallyTimeSpent" value="13300000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
@@ -422,7 +443,8 @@
     <MESSAGE value="add docker file 2" />
     <MESSAGE value="add docker file 3" />
     <MESSAGE value="add docker file 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="add docker file 4" />
+    <MESSAGE value="add docker file 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="add docker file 5" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package.json">
@@ -536,8 +558,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        <state relative-caret-position="88">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>
