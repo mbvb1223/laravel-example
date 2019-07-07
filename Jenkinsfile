@@ -22,7 +22,7 @@ node('master') {
         }
 
         stage('Test') {
-            parallel (
+            parallel {
                 stage('Unit') {
                     def customImage = docker.build('app')
                     customImage.inside {
@@ -35,8 +35,7 @@ node('master') {
                         sh 'php ./vendor/bin/phpunit'
                     }
                 }
-            )
-
+            }
         }
 
         stage('Deploy') {
