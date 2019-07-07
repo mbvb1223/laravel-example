@@ -2,6 +2,8 @@
 
 node('master') {
     try {
+        def customImage = docker.build('app')
+
         stage('build') {
             // Checkout the app at the given commit sha from the webhook
             checkout scm
@@ -9,7 +11,7 @@ node('master') {
             // Install dependencies, create a new .env file and generate a new key, just for testing
             sh "cp .env.example .env"
 
-            def customImage = docker.build('app')
+
             docker.build('webserver')
             docker.build('db')
 
