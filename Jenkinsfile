@@ -2,6 +2,7 @@
 
 node('master') {
     try {
+        agent { docker 'php' }
         stage('build') {
             // Checkout the app at the given commit sha from the webhook
             checkout scm
