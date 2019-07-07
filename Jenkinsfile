@@ -16,15 +16,13 @@ node('master') {
             customImage.inside {
                 sh 'composer install'
                 sh 'php artisan key:generate'
-                sh 'php artisan migrate:refresh --seed'
-                sh './vendor/bin/phpunit'
             }
         }
 
         stage('test') {
-            // Run any testing suites
-            sh " php artisan migrate:refresh --seed"
-            sh "./vendor/bin/phpunit"
+            customImage.inside {
+                sh './vendor/bin/phpunit'
+            }
         }
 
         stage('deploy') {
