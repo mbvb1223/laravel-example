@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker 'maven:3-alpine' }
+    agent { dockerfile true }
     stages {
         stage('Example Build') {
             steps {
