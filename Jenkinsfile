@@ -7,26 +7,27 @@ node('master') {
             checkout scm
 
             // Install dependencies, create a new .env file and generate a new key, just for testing
-            sh "cp .env.example .env"
-            docker.build('app')
-            docker.build('webserver')
-            docker.build('db')
-            sh "php artisan key:generate"
+            sh 'cp .env.example .env'
+            def customImage = docker.build('app')
 
-            // Run any static asset building, if needed
-            // sh "npm install && gulp --production"
+            customImage.inside {
+                sh 'php artisan key:generate'
+                sh 'php artisan migrate:refresh --seed'
+                sh './vendor/bin/phpunit'
+            }
+
         }
 
         stage('test') {
             // Run any testing suites
-            sh " php artisan migrate:refresh --seed"
-            sh "./vendor/bin/phpunit"
+            sh ' php artisan migrate:refresh --seed'
+            sh './vendor/bin/phpunit'
         }
 
         stage('deploy') {
             // If we had ansible installed on the server, setup to run an ansible playbook
-            // sh "ansible-playbook -i ./ansible/hosts ./ansible/deploy.yml"
-            sh "echo 'WE ARE DEPLOYING.......'"
+            // sh 'ansible-playbook -i ./ansible/hosts ./ansible/deploy.yml'
+            sh 'echo 'WE ARE DEPLOYING.......''
         }
     } catch(error) {
         throw error
