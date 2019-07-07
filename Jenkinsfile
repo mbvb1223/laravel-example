@@ -9,7 +9,8 @@ node('master') {
             // Install dependencies, create a new .env file and generate a new key, just for testing
             sh "cp .env.example .env"
             docker.build('app')
-            sh "/usr/local/bin/docker-compose up"
+            docker.build('webserver')
+            docker.build('db')
             sh "php artisan key:generate"
 
             // Run any static asset building, if needed
